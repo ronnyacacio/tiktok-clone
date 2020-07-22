@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo, Feather, AntDesign } from '@expo/vector-icons';
 
+import NewButton from './components/NewButton';
 import Home from './screens/Home';
 
 const { Navigator, Screen } = createBottomTabNavigator();
@@ -44,7 +45,7 @@ export default function Routes() {
           component={Home}
           options={{
             title: '',
-            tabBarIcon: ({ size, color }) => null,
+            tabBarIcon: ({ size, color }) => <NewButton />,
           }}
         />
 
